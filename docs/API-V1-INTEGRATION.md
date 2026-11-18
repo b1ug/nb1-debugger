@@ -65,3 +65,7 @@ Use an isolated HTTP server and fake device first. Cover all nine Actions, both 
 Opening pages, editing inputs, switching languages, and previewing should create no Job. Exercise explicit playback and stop, errors, cancellation, disconnected state, unknown outcomes, keyboard navigation, 390 px layouts, and reduced motion in English and Chinese.
 
 Run syntax, locale and closed-inventory checks, then verify the produced manifest in a matching nb1 integration tree. Limits are 768 KiB decoded base UI, 6 MiB total stored assets and 16 MiB total decoded assets, including the manifest. Physical acceptance remains a separate native/hardware task.
+
+## Device selection
+
+Device choices are sorted by serial using byte order, not USB insertion order. On first load, the first online device is selected; if all are offline, the first configured serial remains visible with its connection status. Refresh and language changes preserve the current target, including an offline or removed device. A removed target stays selected with an explanation until the user chooses another device. Multiple-device feedback shows the configured count and current target. Play requires a confirmed online target and still validates and submits that explicit serial; selection and refresh never play or retry a Job.
