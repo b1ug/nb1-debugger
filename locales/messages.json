@@ -1,0 +1,1372 @@
+{
+  "locales": {
+    "en": "English",
+    "zh-CN": "简体中文"
+  },
+  "messages": [
+    {
+      "key": "v1.nb1_little_light_workbench",
+      "en": "nb1 · Little light workbench",
+      "zh-CN": "nb1 · 小小灯光工作台"
+    },
+    {
+      "key": "v1.skip_to_workbench",
+      "en": "Skip to workbench",
+      "zh-CN": "跳至工作台"
+    },
+    {
+      "key": "v1.workbench_navigation",
+      "en": "Workbench navigation",
+      "zh-CN": "工作台导航"
+    },
+    {
+      "key": "v1.little_light_workbench",
+      "en": "Little light workbench",
+      "zh-CN": "小小灯光工作台"
+    },
+    {
+      "key": "v1.workbench",
+      "en": "Workbench",
+      "zh-CN": "工作台"
+    },
+    {
+      "key": "v1.orbit",
+      "en": "Orbit",
+      "zh-CN": "环绕"
+    },
+    {
+      "key": "v1.pattern_book",
+      "en": "Pattern Book",
+      "zh-CN": "图案手账"
+    },
+    {
+      "key": "v1.language",
+      "en": "Language",
+      "zh-CN": "语言"
+    },
+    {
+      "key": "v1.your_local_light",
+      "en": "Your local light",
+      "zh-CN": "身边的小灯"
+    },
+    {
+      "key": "v1.reading_the_local_service",
+      "en": "Reading the local service…",
+      "zh-CN": "正在读取本地服务…"
+    },
+    {
+      "key": "v1.device",
+      "en": "Device",
+      "zh-CN": "设备"
+    },
+    {
+      "key": "v1.refresh",
+      "en": "Refresh",
+      "zh-CN": "刷新"
+    },
+    {
+      "key": "v1.ready_to_make_a_little_light",
+      "en": "Ready to make a little light.",
+      "zh-CN": "准备好，为这一刻添一点光。"
+    },
+    {
+      "key": "v1.make_a_little_light",
+      "en": "Make a little light",
+      "zh-CN": "调一盏小灯"
+    },
+    {
+      "key": "v1.input_type",
+      "en": "Input type",
+      "zh-CN": "输入类型"
+    },
+    {
+      "key": "v1.action",
+      "en": "Action",
+      "zh-CN": "动作"
+    },
+    {
+      "key": "v1.sequence",
+      "en": "Sequence",
+      "zh-CN": "序列"
+    },
+    {
+      "key": "v1.pattern",
+      "en": "Pattern",
+      "zh-CN": "图案"
+    },
+    {
+      "key": "v1.light_actions",
+      "en": "Light actions",
+      "zh-CN": "灯光动作"
+    },
+    {
+      "key": "v1.first_color",
+      "en": "First color",
+      "zh-CN": "第一种颜色"
+    },
+    {
+      "key": "v1.second_color",
+      "en": "Second color",
+      "zh-CN": "第二种颜色"
+    },
+    {
+      "key": "v1.color_picker",
+      "en": "Color picker",
+      "zh-CN": "调色板"
+    },
+    {
+      "key": "v1.second_color_picker",
+      "en": "Second color picker",
+      "zh-CN": "第二种颜色调色板"
+    },
+    {
+      "key": "v1.color_format",
+      "en": "Color format",
+      "zh-CN": "颜色格式"
+    },
+    {
+      "key": "v1.second_color_format",
+      "en": "Second color format",
+      "zh-CN": "第二种颜色格式"
+    },
+    {
+      "key": "v1.name_hex_name",
+      "en": "Name / Hex / @name",
+      "zh-CN": "名称 / Hex / @色名"
+    },
+    {
+      "key": "v1.rgb",
+      "en": "RGB",
+      "zh-CN": "RGB"
+    },
+    {
+      "key": "v1.hsb",
+      "en": "HSB",
+      "zh-CN": "HSB"
+    },
+    {
+      "key": "v1.color_value",
+      "en": "Color value",
+      "zh-CN": "颜色值"
+    },
+    {
+      "key": "v1.second_color_value",
+      "en": "Second color value",
+      "zh-CN": "第二种颜色值"
+    },
+    {
+      "key": "v1.color_palette",
+      "en": "Color palette",
+      "zh-CN": "常用颜色"
+    },
+    {
+      "key": "v1.second_color_palette",
+      "en": "Second color palette",
+      "zh-CN": "第二组常用颜色"
+    },
+    {
+      "key": "v1.resolve_color",
+      "en": "Resolve color",
+      "zh-CN": "解析颜色"
+    },
+    {
+      "key": "v1.sequence_json",
+      "en": "Sequence JSON",
+      "zh-CN": "序列 JSON"
+    },
+    {
+      "key": "v1.serial_steps_finish_in_order_interval_steps_can_overlap_their_fades_the_core_validates_the_timing",
+      "en": "Serial steps finish in order. Interval steps can overlap their fades. The core validates the timing.",
+      "zh-CN": "串行步骤依次完成，间隔步骤的渐变可以重叠。时序交给核心校验。"
+    },
+    {
+      "key": "v1.saved_pattern",
+      "en": "Saved Pattern",
+      "zh-CN": "已存图案"
+    },
+    {
+      "key": "v1.read_pattern",
+      "en": "Read Pattern",
+      "zh-CN": "读取图案"
+    },
+    {
+      "key": "v1.edit_as_sequence",
+      "en": "Edit as Sequence",
+      "zh-CN": "作为序列编辑"
+    },
+    {
+      "key": "v1.preview_only",
+      "en": "Preview only",
+      "zh-CN": "只看预览"
+    },
+    {
+      "key": "v1.play_on_device",
+      "en": "Play on device",
+      "zh-CN": "在设备上播放"
+    },
+    {
+      "key": "v1.preview_and_save_keep_the_light_unchanged_playback_starts_only_when_you_choose_play",
+      "en": "Preview and save keep the light unchanged. Playback starts only when you choose Play.",
+      "zh-CN": "预览与保存不会点亮设备。按下播放，灯光才会开始。"
+    },
+    {
+      "key": "v1.at_the_light",
+      "en": "At the light",
+      "zh-CN": "看看小灯"
+    },
+    {
+      "key": "v1.disconnected",
+      "en": "Disconnected",
+      "zh-CN": "未连接"
+    },
+    {
+      "key": "v1.logical_led_channel_readback",
+      "en": "Logical LED channel readback",
+      "zh-CN": "LED 逻辑通道读回"
+    },
+    {
+      "key": "v1.led_1",
+      "en": "LED 1",
+      "zh-CN": "LED 1"
+    },
+    {
+      "key": "v1.led_2",
+      "en": "LED 2",
+      "zh-CN": "LED 2"
+    },
+    {
+      "key": "v1.this_playback",
+      "en": "This playback",
+      "zh-CN": "这一次播放"
+    },
+    {
+      "key": "v1.job_id",
+      "en": "Job ID",
+      "zh-CN": "任务 ID"
+    },
+    {
+      "key": "v1.status",
+      "en": "Status",
+      "zh-CN": "状态"
+    },
+    {
+      "key": "v1.not_submitted",
+      "en": "Not submitted",
+      "zh-CN": "尚未提交"
+    },
+    {
+      "key": "v1.steps",
+      "en": "Steps",
+      "zh-CN": "步骤"
+    },
+    {
+      "key": "v1.job_progress",
+      "en": "Job progress",
+      "zh-CN": "任务进度"
+    },
+    {
+      "key": "v1.query_job",
+      "en": "Query Job",
+      "zh-CN": "查询任务"
+    },
+    {
+      "key": "v1.stop_this_job",
+      "en": "Stop this Job",
+      "zh-CN": "停止这次任务"
+    },
+    {
+      "key": "v1.keep_id_and_start_a_separate_run",
+      "en": "Keep ID and start a separate run",
+      "zh-CN": "保留 ID，另开一次播放"
+    },
+    {
+      "key": "v1.a_job_is_complete_when_device_cleanup_is_confirmed",
+      "en": "A Job is complete when device cleanup is confirmed.",
+      "zh-CN": "设备清理确认完成后，任务才算结束。"
+    },
+    {
+      "key": "v1.understand_the_request",
+      "en": "Understand the request",
+      "zh-CN": "看懂这次调用"
+    },
+    {
+      "key": "v1.no_preview_yet",
+      "en": "No preview yet",
+      "zh-CN": "尚未预览"
+    },
+    {
+      "key": "v1.input",
+      "en": "Input",
+      "zh-CN": "输入"
+    },
+    {
+      "key": "v1.compiled_sequence",
+      "en": "Compiled Sequence",
+      "zh-CN": "编译后的序列"
+    },
+    {
+      "key": "v1.preview_will_show_the_device_check_and_nominal_duration",
+      "en": "Preview will show the device check and nominal duration.",
+      "zh-CN": "预览会显示设备能力检查与名义时长。"
+    },
+    {
+      "key": "v1.refresh_colors",
+      "en": "Refresh colors",
+      "zh-CN": "刷新颜色"
+    },
+    {
+      "key": "v1.local_colors",
+      "en": "Local colors",
+      "zh-CN": "本机颜色"
+    },
+    {
+      "key": "v1.color_name",
+      "en": "Color name",
+      "zh-CN": "颜色名称"
+    },
+    {
+      "key": "v1.refresh_patterns",
+      "en": "Refresh Patterns",
+      "zh-CN": "刷新图案"
+    },
+    {
+      "key": "v1.pattern_id",
+      "en": "Pattern ID",
+      "zh-CN": "图案 ID"
+    },
+    {
+      "key": "v1.title",
+      "en": "Title",
+      "zh-CN": "标题"
+    },
+    {
+      "key": "v1.a_little_evening_light",
+      "en": "A little evening light",
+      "zh-CN": "一盏晚间小灯"
+    },
+    {
+      "key": "v1.save_current_draft",
+      "en": "Save current draft",
+      "zh-CN": "保存当前草稿"
+    },
+    {
+      "key": "v1.read_saved_pattern",
+      "en": "Read saved Pattern",
+      "zh-CN": "读取已存图案"
+    },
+    {
+      "key": "v1.details",
+      "en": "Details",
+      "zh-CN": "详情"
+    },
+    {
+      "key": "v1.nb1_local_light_shared_ideas",
+      "en": "nb1 · Local light, shared ideas.",
+      "zh-CN": "nb1 · 灯光在身边，灵感可分享。"
+    },
+    {
+      "key": "v1.set",
+      "en": "Set",
+      "zh-CN": "设色"
+    },
+    {
+      "key": "v1.off",
+      "en": "Off",
+      "zh-CN": "熄灭"
+    },
+    {
+      "key": "v1.fade",
+      "en": "Fade",
+      "zh-CN": "渐变"
+    },
+    {
+      "key": "v1.blink",
+      "en": "Blink",
+      "zh-CN": "闪烁"
+    },
+    {
+      "key": "v1.breathe",
+      "en": "Breathe",
+      "zh-CN": "呼吸"
+    },
+    {
+      "key": "v1.pulse",
+      "en": "Pulse",
+      "zh-CN": "脉冲"
+    },
+    {
+      "key": "v1.alternate",
+      "en": "Alternate",
+      "zh-CN": "交替"
+    },
+    {
+      "key": "v1.rainbow",
+      "en": "Rainbow",
+      "zh-CN": "彩虹"
+    },
+    {
+      "key": "v1.hold_one_color",
+      "en": "Hold one color.",
+      "zh-CN": "让小灯保持一种颜色。"
+    },
+    {
+      "key": "v1.turn_the_selected_output_black",
+      "en": "Turn the selected output black.",
+      "zh-CN": "让选中的输出熄灭。"
+    },
+    {
+      "key": "v1.move_smoothly_from_the_current_color_to_your_target",
+      "en": "Move smoothly from the current color to your target.",
+      "zh-CN": "从当前颜色平滑走向目标颜色。"
+    },
+    {
+      "key": "v1.a_clear_rhythm_of_light_and_dark",
+      "en": "A clear rhythm of light and dark.",
+      "zh-CN": "亮与灭，节奏分明。"
+    },
+    {
+      "key": "v1.rise_gently_from_black_and_return",
+      "en": "Rise gently from black and return.",
+      "zh-CN": "从黑色轻轻亮起，再缓缓落下。"
+    },
+    {
+      "key": "v1.a_quick_rise_a_fall_and_a_little_rest",
+      "en": "A quick rise, a fall, and a little rest.",
+      "zh-CN": "一次起落，留一点空白。"
+    },
+    {
+      "key": "v1.two_colors_take_turns_between_the_two_outputs",
+      "en": "Two colors take turns between the two outputs.",
+      "zh-CN": "两种颜色在两个输出之间轮流交换。"
+    },
+    {
+      "key": "v1.four_paired_fades_move_the_color_and_brightness_between_outputs",
+      "en": "Four paired fades move the color and brightness between outputs.",
+      "zh-CN": "四段配对渐变，让颜色与明暗在两端流动。"
+    },
+    {
+      "key": "v1.travel_through_seven_colors_and_return_to_red",
+      "en": "Travel through seven colors and return to red.",
+      "zh-CN": "走过七种颜色，再回到红色。"
+    },
+    {
+      "key": "v1.output",
+      "en": "Output",
+      "zh-CN": "输出"
+    },
+    {
+      "key": "v1.both_leds",
+      "en": "Both LEDs",
+      "zh-CN": "两个 LED"
+    },
+    {
+      "key": "v1.led_order",
+      "en": "LED order",
+      "zh-CN": "LED 顺序"
+    },
+    {
+      "key": "v1.led_1_led_2",
+      "en": "LED 1 → LED 2",
+      "zh-CN": "LED 1 → LED 2"
+    },
+    {
+      "key": "v1.led_2_led_1",
+      "en": "LED 2 → LED 1",
+      "zh-CN": "LED 2 → LED 1"
+    },
+    {
+      "key": "v1.fade_duration_ms",
+      "en": "Fade duration · ms",
+      "zh-CN": "渐变时长 · 毫秒"
+    },
+    {
+      "key": "v1.on_duration_ms",
+      "en": "On duration · ms",
+      "zh-CN": "亮起时长 · 毫秒"
+    },
+    {
+      "key": "v1.off_duration_ms",
+      "en": "Off duration · ms",
+      "zh-CN": "熄灭时长 · 毫秒"
+    },
+    {
+      "key": "v1.cycle_duration_ms",
+      "en": "Cycle duration · ms",
+      "zh-CN": "一轮时长 · 毫秒"
+    },
+    {
+      "key": "v1.rise_ms",
+      "en": "Rise · ms",
+      "zh-CN": "渐亮 · 毫秒"
+    },
+    {
+      "key": "v1.fall_ms",
+      "en": "Fall · ms",
+      "zh-CN": "渐暗 · 毫秒"
+    },
+    {
+      "key": "v1.rest_ms",
+      "en": "Rest · ms",
+      "zh-CN": "留白 · 毫秒"
+    },
+    {
+      "key": "v1.cycles",
+      "en": "Cycles",
+      "zh-CN": "轮数"
+    },
+    {
+      "key": "v1.on_finish",
+      "en": "On finish",
+      "zh-CN": "结束时"
+    },
+    {
+      "key": "v1.hold_final_state",
+      "en": "Hold final state",
+      "zh-CN": "保留最终状态"
+    },
+    {
+      "key": "v1.draft_changed",
+      "en": "Draft changed",
+      "zh-CN": "草稿已更改"
+    },
+    {
+      "key": "v1.draft_changed_preview_again",
+      "en": "Draft changed. Preview again.",
+      "zh-CN": "草稿已更改，请重新预览。"
+    },
+    {
+      "key": "v1.preview_ready",
+      "en": "Preview ready",
+      "zh-CN": "预览就绪"
+    },
+    {
+      "key": "v1.preview_ready_the_light_is_unchanged",
+      "en": "Preview ready. The light is unchanged.",
+      "zh-CN": "预览已就绪，小灯保持原样。"
+    },
+    {
+      "key": "v1.queued",
+      "en": "Queued",
+      "zh-CN": "排队中"
+    },
+    {
+      "key": "v1.running",
+      "en": "Running",
+      "zh-CN": "播放中"
+    },
+    {
+      "key": "v1.cancelling",
+      "en": "Cancelling",
+      "zh-CN": "停止中"
+    },
+    {
+      "key": "v1.succeeded",
+      "en": "Succeeded",
+      "zh-CN": "已完成"
+    },
+    {
+      "key": "v1.cancelled",
+      "en": "Cancelled",
+      "zh-CN": "已停止"
+    },
+    {
+      "key": "v1.failed",
+      "en": "Failed",
+      "zh-CN": "失败"
+    },
+    {
+      "key": "v1.outcome_unknown",
+      "en": "Outcome unknown",
+      "zh-CN": "结果待确认"
+    },
+    {
+      "key": "v1.submission_rejected",
+      "en": "Submission rejected",
+      "zh-CN": "提交被拒绝"
+    },
+    {
+      "key": "v1.keep_this_job_id_and_query_it_decide_any_new_run_explicitly",
+      "en": "Keep this Job ID and query it. Decide any new run explicitly.",
+      "zh-CN": "保留这个任务 ID 并查询。另一次播放由你明确决定。"
+    },
+    {
+      "key": "v1.outcome_unknown_keep_the_job_id_and_query_it",
+      "en": "Outcome unknown. Keep the Job ID and query it.",
+      "zh-CN": "结果尚未确认，请保留任务 ID 并查询。"
+    },
+    {
+      "key": "v1.job_accepted_follow_its_progress_here",
+      "en": "Job accepted. Follow its progress here.",
+      "zh-CN": "任务已接受，可在这里查看进度。"
+    },
+    {
+      "key": "v1.selected_from_the_local_service",
+      "en": "Selected from the local service.",
+      "zh-CN": "从本地服务中选择的设备。"
+    },
+    {
+      "key": "v1.no_devices_configured",
+      "en": "No devices configured.",
+      "zh-CN": "尚未配置设备。"
+    },
+    {
+      "key": "v1.online",
+      "en": "Online",
+      "zh-CN": "在线"
+    },
+    {
+      "key": "v1.offline",
+      "en": "Offline",
+      "zh-CN": "离线"
+    },
+    {
+      "key": "v1.pattern_read_the_light_is_unchanged",
+      "en": "Pattern read. The light is unchanged.",
+      "zh-CN": "图案已读取，小灯保持原样。"
+    },
+    {
+      "key": "v1.pattern_saved_no_job_was_created",
+      "en": "Pattern saved. No Job was created.",
+      "zh-CN": "图案已保存，没有创建播放任务。"
+    },
+    {
+      "key": "v1.save_outcome_unknown_read_the_saved_id_before_deciding_what_to_do_next",
+      "en": "Save outcome unknown. Read the saved ID before deciding what to do next.",
+      "zh-CN": "保存结果待确认，请先按原 ID 读取，再决定下一步。"
+    },
+    {
+      "key": "v1.color_saved_the_light_is_unchanged",
+      "en": "Color saved. The light is unchanged.",
+      "zh-CN": "颜色已保存，小灯保持原样。"
+    },
+    {
+      "key": "v1.ready_for_a_separate_run_previous_ids_stay_in_this_tab_s_history",
+      "en": "Ready for a separate run. Previous IDs stay in this tab's history.",
+      "zh-CN": "可以另开一次播放，原 ID 保留在此标签页的历史中。"
+    },
+    {
+      "key": "v1.request_failed_check_details_below",
+      "en": "Request failed. Check Details below.",
+      "zh-CN": "请求未完成，请查看下方详情。"
+    },
+    {
+      "key": "v1.supported",
+      "en": "supported",
+      "zh-CN": "支持"
+    },
+    {
+      "key": "v1.unsupported",
+      "en": "unsupported",
+      "zh-CN": "不支持"
+    },
+    {
+      "key": "v1.unknown",
+      "en": "unknown",
+      "zh-CN": "尚不明确"
+    },
+    {
+      "key": "v1.not_requested",
+      "en": "not_requested",
+      "zh-CN": "未检查"
+    },
+    {
+      "key": "v1.steps_p0_p1_ms_p2",
+      "en": "Steps: {p0} · {p1} ms · {p2}",
+      "zh-CN": "步骤 {p0} · {p1} 毫秒 · {p2}",
+      "recursive": 4
+    },
+    {
+      "key": "v1.use_compiled_sequence",
+      "en": "Use compiled Sequence",
+      "zh-CN": "使用编译后的序列"
+    },
+    {
+      "key": "v1.terminal_result_retained",
+      "en": "Stored terminal result retained. Query failed.",
+      "zh-CN": "已保留确认过的任务终态，本次查询未完成。"
+    },
+    {
+      "key": "v1.observation_and_playback",
+      "en": "Device observation and playback",
+      "zh-CN": "设备观察与播放"
+    },
+    {
+      "key": "v1.cached_rgb",
+      "en": "Cached RGB",
+      "zh-CN": "缓存 RGB"
+    },
+    {
+      "key": "v1.sampled",
+      "en": "Sampled",
+      "zh-CN": "采样时间"
+    },
+    {
+      "key": "v1.cached_values_note",
+      "en": "Cached device values, not a measurement of physical light.",
+      "zh-CN": "设备缓存读数，不代表对实际光色的测量。"
+    },
+    {
+      "key": "v1.request_inspect",
+      "en": "Inspect the input and compiled Sequence.",
+      "zh-CN": "查看输入与核心编译后的 Sequence。"
+    },
+    {
+      "key": "v1.local_library",
+      "en": "Local library",
+      "zh-CN": "本地收藏"
+    },
+    {
+      "key": "v1.on_this_computer",
+      "en": "On this computer.",
+      "zh-CN": "就存在这台电脑。"
+    },
+    {
+      "key": "editor.format_json",
+      "en": "Format JSON",
+      "zh-CN": "格式化 JSON"
+    },
+    {
+      "key": "editor.plain_text",
+      "en": "Plain text",
+      "zh-CN": "纯文本"
+    },
+    {
+      "key": "editor.goto_error",
+      "en": "Go to error",
+      "zh-CN": "定位错误"
+    },
+    {
+      "key": "editor.sequence_editor",
+      "en": "Sequence JSON editor",
+      "zh-CN": "Sequence JSON 编辑器"
+    },
+    {
+      "key": "editor.help",
+      "en": "JSON syntax is checked in this browser. Color samples use local nb1. Preview validates the Sequence and device. Tab leaves the editor.",
+      "zh-CN": "JSON 语法在浏览器检查，颜色小样由本机 nb1 解析。预览进一步校验 Sequence 与设备。按 Tab 离开编辑器。"
+    },
+    {
+      "key": "editor.valid",
+      "en": "JSON syntax is valid. Preview checks the Sequence rules.",
+      "zh-CN": "JSON 语法有效；Sequence 规则由预览进一步校验。"
+    },
+    {
+      "key": "editor.fallback",
+      "en": "The enhanced editor could not start. Plain text remains available.",
+      "zh-CN": "增强编辑器未能启动，仍可使用纯文本编辑。"
+    },
+    {
+      "key": "editor.expected_colon",
+      "en": "Expected ':' after the property name.",
+      "zh-CN": "属性名后应有冒号 :。"
+    },
+    {
+      "key": "editor.punctuation",
+      "en": "Unexpected JSON punctuation.",
+      "zh-CN": "JSON 标点不符合语法。"
+    },
+    {
+      "key": "editor.unicode",
+      "en": "JSON strings need complete Unicode characters.",
+      "zh-CN": "JSON 字符串需要完整的 Unicode 字符。"
+    },
+    {
+      "key": "editor.unicode_escape",
+      "en": "Invalid Unicode escape in JSON string.",
+      "zh-CN": "JSON 字符串的 Unicode 转义无效。"
+    },
+    {
+      "key": "editor.escape",
+      "en": "Invalid escape in JSON string.",
+      "zh-CN": "JSON 字符串的转义无效。"
+    },
+    {
+      "key": "editor.control",
+      "en": "Unescaped control character in JSON string.",
+      "zh-CN": "JSON 字符串中有未转义的控制字符。"
+    },
+    {
+      "key": "editor.unterminated",
+      "en": "Unterminated JSON string.",
+      "zh-CN": "JSON 字符串缺少结束引号。"
+    },
+    {
+      "key": "editor.nesting",
+      "en": "JSON nesting exceeds 64 levels.",
+      "zh-CN": "JSON 嵌套超过 64 层。"
+    },
+    {
+      "key": "editor.property",
+      "en": "Expected a property name in double quotes.",
+      "zh-CN": "此处应为双引号包围的属性名。"
+    },
+    {
+      "key": "editor.object_comma",
+      "en": "Expected ',' or '}'.",
+      "zh-CN": "此处应为逗号 , 或右花括号 }。"
+    },
+    {
+      "key": "editor.array_comma",
+      "en": "Expected ',' or ']'.",
+      "zh-CN": "此处应为逗号 , 或右方括号 ]。"
+    },
+    {
+      "key": "editor.value",
+      "en": "Expected a JSON value.",
+      "zh-CN": "此处应为 JSON 值。"
+    },
+    {
+      "key": "editor.too_large",
+      "en": "This draft is too large for local JSON checks.",
+      "zh-CN": "草稿过大，无法进行本地 JSON 检查。"
+    },
+    {
+      "key": "editor.empty",
+      "en": "Enter a JSON object to begin.",
+      "zh-CN": "输入一个 JSON 对象即可开始。"
+    },
+    {
+      "key": "editor.trailing",
+      "en": "Unexpected text after the JSON value.",
+      "zh-CN": "JSON 值后还有多余内容。"
+    },
+    {
+      "key": "editor.object_root",
+      "en": "Use one JSON object for a Sequence.",
+      "zh-CN": "Sequence 应为一个 JSON 对象。"
+    },
+    {
+      "key": "editor.location",
+      "en": "Line {p0}, column {p1}: {p2}",
+      "zh-CN": "第 {p0} 行，第 {p1} 列：{p2}",
+      "recursive": 4
+    },
+    {
+      "key": "editor.duplicate",
+      "en": "Duplicate property: {p0}.",
+      "zh-CN": "属性重复：{p0}。"
+    },
+    {
+      "key": "editor.color_limit",
+      "en": "This draft has too many color samples. Preview checks the color fields.",
+      "zh-CN": "草稿中的颜色小样过多，请通过预览校验颜色字段。"
+    },
+    {
+      "key": "editor.color_unavailable",
+      "en": "Some color samples are unavailable. Preview checks the color fields.",
+      "zh-CN": "部分颜色小样暂不可用，请通过预览校验颜色字段。"
+    },
+    {
+      "key": "editor.color_matches",
+      "en": "Color samples match the local nb1 resolver.",
+      "zh-CN": "颜色小样与本机 nb1 的解析结果一致。"
+    },
+    {
+      "key": "editor.color_service",
+      "en": "Color samples need the local nb1 service.",
+      "zh-CN": "颜色小样需要连接本机 nb1 服务。"
+    },
+    {
+      "key": "editor.color_pending",
+      "en": "Resolving color samples with local nb1…",
+      "zh-CN": "正在通过本机 nb1 解析颜色小样…"
+    },
+    {
+      "key": "library.context_0",
+      "en": "Local library, device observation and playback",
+      "zh-CN": "本地作品库、设备观测与播放"
+    },
+    {
+      "key": "library.context_1",
+      "en": "Use a saved color",
+      "zh-CN": "使用本地颜色"
+    },
+    {
+      "key": "library.context_2",
+      "en": "Choose a saved color",
+      "zh-CN": "选择本地颜色"
+    },
+    {
+      "key": "library.context_3",
+      "en": "Checking color…",
+      "zh-CN": "正在解析颜色…"
+    },
+    {
+      "key": "library.context_4",
+      "en": "Current color",
+      "zh-CN": "当前颜色"
+    },
+    {
+      "key": "library.context_5",
+      "en": "Check color",
+      "zh-CN": "解析颜色"
+    },
+    {
+      "key": "library.context_6",
+      "en": "Complete this color first.",
+      "zh-CN": "请先填写完整的颜色。"
+    },
+    {
+      "key": "library.context_7",
+      "en": "Could not resolve this color. Check it again.",
+      "zh-CN": "未能解析这个颜色，请重新解析。"
+    },
+    {
+      "key": "library.context_8",
+      "en": "Save this color",
+      "zh-CN": "保存这个颜色"
+    },
+    {
+      "key": "library.context_9",
+      "en": "Save color",
+      "zh-CN": "保存颜色"
+    },
+    {
+      "key": "library.context_10",
+      "en": "Save the color shown above under a local name.",
+      "zh-CN": "给上方颜色起个名字，保存在本机。"
+    },
+    {
+      "key": "library.context_11",
+      "en": "Check saved color",
+      "zh-CN": "核对已存颜色"
+    },
+    {
+      "key": "library.context_12",
+      "en": "Check this color before saving it",
+      "zh-CN": "保存前请先解析这个颜色"
+    },
+    {
+      "key": "library.context_13",
+      "en": "Saving the captured color…",
+      "zh-CN": "正在保存刚才选定的颜色…"
+    },
+    {
+      "key": "library.context_14",
+      "en": "Saved the captured color. Your current inputs have changed.",
+      "zh-CN": "已保存点击时的颜色；当前输入已发生变化。"
+    },
+    {
+      "key": "library.context_15",
+      "en": "Color saved on this computer.",
+      "zh-CN": "颜色已保存在本机。"
+    },
+    {
+      "key": "library.context_16",
+      "en": "Color saved. Refresh the local list to see it.",
+      "zh-CN": "颜色已保存，可刷新本地列表查看。"
+    },
+    {
+      "key": "library.context_17",
+      "en": "Color was not saved. Check Details.",
+      "zh-CN": "颜色未保存，请查看详情。"
+    },
+    {
+      "key": "library.context_18",
+      "en": "Save outcome unknown. Check the saved color before saving again.",
+      "zh-CN": "保存结果未知，再次保存前请先核对已存颜色。"
+    },
+    {
+      "key": "library.context_19",
+      "en": "Saved color found. Review its value before saving again.",
+      "zh-CN": "已找到保存的颜色，再次保存前请核对色值。"
+    },
+    {
+      "key": "library.context_20",
+      "en": "No saved color with this name was found. You can choose to save again.",
+      "zh-CN": "未找到同名已存颜色，可以自行选择再次保存。"
+    },
+    {
+      "key": "library.context_21",
+      "en": "Local color reference",
+      "zh-CN": "本地颜色引用"
+    },
+    {
+      "key": "library.context_22",
+      "en": "Copy @name",
+      "zh-CN": "复制 @name"
+    },
+    {
+      "key": "library.context_23",
+      "en": "Color reference to copy",
+      "zh-CN": "待复制的颜色引用"
+    },
+    {
+      "key": "library.context_24",
+      "en": "Use a local color name in any target color.",
+      "zh-CN": "可在任意目标 color 中使用本地颜色名。"
+    },
+    {
+      "key": "library.context_25",
+      "en": "Color reference copied. Paste it into a target color.",
+      "zh-CN": "颜色引用已复制，可粘贴到目标 color。"
+    },
+    {
+      "key": "library.context_26",
+      "en": "Reference selected. Copy it, then paste it into a target color.",
+      "zh-CN": "引用已选中，请复制后粘贴到目标 color。"
+    },
+    {
+      "key": "library.context_27",
+      "en": "Save a Pattern",
+      "zh-CN": "保存一个图案"
+    },
+    {
+      "key": "library.context_28",
+      "en": "Current draft",
+      "zh-CN": "当前草稿"
+    },
+    {
+      "key": "library.context_29",
+      "en": "Save all settings in this Action.",
+      "zh-CN": "保存这个动作的全部设置。"
+    },
+    {
+      "key": "library.context_30",
+      "en": "Save the JSON currently in the editor.",
+      "zh-CN": "保存编辑器中当前的 JSON。"
+    },
+    {
+      "key": "library.context_31",
+      "en": "Read this Pattern, or edit it as a Sequence to save a new draft.",
+      "zh-CN": "可读取此图案，或编辑为序列后再另存。"
+    },
+    {
+      "key": "library.context_32",
+      "en": "Save this draft",
+      "zh-CN": "保存这个草稿"
+    },
+    {
+      "key": "library.context_33",
+      "en": "Check saved Pattern",
+      "zh-CN": "核对已存图案"
+    },
+    {
+      "key": "library.context_34",
+      "en": "Saved on this computer. Saving does not play it.",
+      "zh-CN": "保存在本机；保存不会开始播放。"
+    },
+    {
+      "key": "library.context_35",
+      "en": "Saving the captured draft…",
+      "zh-CN": "正在保存点击时的草稿…"
+    },
+    {
+      "key": "library.context_36",
+      "en": "Saved the captured draft. Your current inputs have changed.",
+      "zh-CN": "已保存点击时的草稿；当前输入已发生变化。"
+    },
+    {
+      "key": "library.context_37",
+      "en": "Pattern saved on this computer. No Job was created.",
+      "zh-CN": "图案已保存在本机，没有创建播放任务。"
+    },
+    {
+      "key": "library.context_38",
+      "en": "Pattern saved. Refresh the Pattern list to see it.",
+      "zh-CN": "图案已保存，可刷新图案列表查看。"
+    },
+    {
+      "key": "library.context_39",
+      "en": "Pattern was not saved. Check Details.",
+      "zh-CN": "图案未保存，请查看详情。"
+    },
+    {
+      "key": "library.context_40",
+      "en": "Save outcome unknown. Check the saved Pattern before saving again.",
+      "zh-CN": "保存结果未知，再次保存前请先核对已存图案。"
+    },
+    {
+      "key": "library.context_41",
+      "en": "Saved Pattern found. Your current draft is unchanged.",
+      "zh-CN": "已找到保存的图案，当前草稿保持不变。"
+    },
+    {
+      "key": "library.context_42",
+      "en": "No saved Pattern with this ID was found. You can choose to save again.",
+      "zh-CN": "未找到此 ID 的已存图案，可以自行选择再次保存。"
+    },
+    {
+      "key": "library.action_source",
+      "en": "Action · {p0}",
+      "zh-CN": "动作 · {p0}",
+      "recursive": 1
+    },
+    {
+      "key": "nightlab.led_colors",
+      "en": "Both LEDs · same color",
+      "zh-CN": "两灯同色"
+    },
+    {
+      "key": "nightlab.separate_led_colors",
+      "en": "Separate LED colors",
+      "zh-CN": "两灯分别设色"
+    },
+    {
+      "key": "nightlab.solid_separate_source",
+      "en": "Solid · separate LED colors",
+      "zh-CN": "常亮 · 两灯分别设色"
+    },
+    {
+      "key": "nightlab.save_both_led_colors",
+      "en": "Save both LED colors as one Sequence.",
+      "zh-CN": "将两路灯色保存为同一个 Sequence。"
+    },
+    {
+      "key": "nightlab.choose_device_before_play",
+      "en": "Choose a device before playing.",
+      "zh-CN": "播放前，请先选择设备。"
+    },
+    {
+      "key": "nightlab.checking_play_draft",
+      "en": "Checking this draft before playback…",
+      "zh-CN": "正在校验当前草稿…"
+    },
+    {
+      "key": "nightlab.stale_play_draft",
+      "en": "Draft changed. Play again to use the current settings.",
+      "zh-CN": "草稿已修改，请再次点击播放以使用当前设置。"
+    },
+    {
+      "key": "nightlab.unsupported_play_draft",
+      "en": "This device cannot play the current draft. Check its connection and supported effects.",
+      "zh-CN": "这台设备无法播放当前草稿，请检查连接状态与支持的效果。"
+    },
+    {
+      "key": "nightlab.starting_play_draft",
+      "en": "Starting the captured draft…",
+      "zh-CN": "正在发送已校验的草稿…"
+    },
+    {
+      "key": "nightlab.playback_started_inline",
+      "en": "Playback started. Follow this Job below.",
+      "zh-CN": "已开始播放，可在下方查看当前 Job。"
+    },
+    {
+      "key": "nightlab.playback_not_started",
+      "en": "Playback was not started: {p0}",
+      "zh-CN": "未开始播放：{p0}"
+    },
+    {
+      "key": "nightlab.playback_rejected_inline",
+      "en": "Playback was rejected. Check the current draft and try again.",
+      "zh-CN": "设备未接受此次播放，请检查当前草稿后重试。"
+    },
+    {
+      "key": "nightlab.playback_unknown_inline",
+      "en": "Outcome unknown. Keep this Job ID and query it before any new run.",
+      "zh-CN": "结果尚不明确，请保留并查询此 Job ID，再决定是否另行播放。"
+    },
+    {
+      "key": "nightlab.draft_validation_inline",
+      "en": "Could not validate this draft: {p0}",
+      "zh-CN": "无法校验当前草稿：{p0}"
+    },
+    {
+      "key": "nightlab.check_current_draft",
+      "en": "Check the current draft and try again.",
+      "zh-CN": "请检查当前草稿后重试。"
+    },
+    {
+      "key": "nightlab.playback_request",
+      "en": "Playback request",
+      "zh-CN": "播放请求"
+    },
+    {
+      "key": "polish.2",
+      "en": "Playback",
+      "zh-CN": "播放"
+    },
+    {
+      "key": "polish.3",
+      "en": "No active Job",
+      "zh-CN": "暂无任务"
+    },
+    {
+      "key": "polish.4",
+      "en": "Check status",
+      "zh-CN": "查询状态"
+    },
+    {
+      "key": "polish.5",
+      "en": "New run",
+      "zh-CN": "另行播放"
+    },
+    {
+      "key": "polish.6",
+      "en": "Stop this device Job",
+      "zh-CN": "停止当前设备任务"
+    },
+    {
+      "key": "polish.7",
+      "en": "Save Pattern",
+      "zh-CN": "保存图案"
+    },
+    {
+      "key": "polish.8",
+      "en": "Save",
+      "zh-CN": "保存"
+    },
+    {
+      "key": "polish.9",
+      "en": "Saving does not play.",
+      "zh-CN": "保存不播放。"
+    },
+    {
+      "key": "polish.10",
+      "en": "Request",
+      "zh-CN": "请求"
+    },
+    {
+      "key": "polish.11",
+      "en": "Input and compiled Sequence.",
+      "zh-CN": "输入与编译序列。"
+    },
+    {
+      "key": "polish.12",
+      "en": "Help",
+      "zh-CN": "帮助"
+    },
+    {
+      "key": "polish.13",
+      "en": "Preview stays on screen. Play controls the light.",
+      "zh-CN": "预览仅在屏幕播放，播放会控制设备。"
+    },
+    {
+      "key": "polish.14",
+      "en": "Stop requests cancellation of this Job. Wait for Stopped. Done does not mean Off.",
+      "zh-CN": "停止会请求取消当前任务，请等待“已停止”。已完成不等于熄灯。"
+    },
+    {
+      "key": "polish.15",
+      "en": "Cached RGB is not an optical measurement.",
+      "zh-CN": "缓存 RGB 不是光学测量。"
+    },
+    {
+      "key": "polish.16",
+      "en": "Both · same color",
+      "zh-CN": "两灯同色"
+    },
+    {
+      "key": "polish.17",
+      "en": "Separate colors",
+      "zh-CN": "两灯分色"
+    },
+    {
+      "key": "polish.18",
+      "en": "LED 1 · blink(1)",
+      "zh-CN": "LED 1 · blink(1)"
+    },
+    {
+      "key": "polish.19",
+      "en": "LED 2 · ThingM",
+      "zh-CN": "LED 2 · ThingM"
+    },
+    {
+      "key": "polish.20",
+      "en": "Playing",
+      "zh-CN": "播放中"
+    },
+    {
+      "key": "polish.21",
+      "en": "Stopping…",
+      "zh-CN": "停止中…"
+    },
+    {
+      "key": "polish.22",
+      "en": "Done",
+      "zh-CN": "已完成"
+    },
+    {
+      "key": "polish.23",
+      "en": "Stopped",
+      "zh-CN": "已停止"
+    },
+    {
+      "key": "polish.24",
+      "en": "Starting…",
+      "zh-CN": "正在启动…"
+    },
+    {
+      "key": "polish.25",
+      "en": "Result unknown",
+      "zh-CN": "结果未知"
+    },
+    {
+      "key": "polish.26",
+      "en": "Not started",
+      "zh-CN": "未启动"
+    },
+    {
+      "key": "polish.27",
+      "en": "Result unknown. Check status.",
+      "zh-CN": "结果未知，请查询状态。"
+    },
+    {
+      "key": "polish.28",
+      "en": "Done · Refresh failed",
+      "zh-CN": "已完成 · 刷新失败"
+    },
+    {
+      "key": "polish.29",
+      "en": "Stopped · Refresh failed",
+      "zh-CN": "已停止 · 刷新失败"
+    },
+    {
+      "key": "polish.30",
+      "en": "Failed · Refresh failed",
+      "zh-CN": "执行失败 · 刷新失败"
+    },
+    {
+      "key": "polish.31",
+      "en": "Device is offline.",
+      "zh-CN": "设备离线。"
+    },
+    {
+      "key": "polish.32",
+      "en": "Choose a device.",
+      "zh-CN": "请选择设备。"
+    },
+    {
+      "key": "polish.33",
+      "en": "Check the draft: {p0}",
+      "zh-CN": "请检查草稿：{p0}"
+    },
+    {
+      "key": "polish.34",
+      "en": "Not started: {p0}",
+      "zh-CN": "未启动：{p0}"
+    },
+    {
+      "key": "play.wait_for_current_job",
+      "en": "{p0}. Wait for this Job before playing again.",
+      "zh-CN": "{p0}，请等待此任务结束后再播放。",
+      "recursive": 1
+    },
+    {
+      "key": "play.preparing_preview",
+      "en": "Preparing preview…",
+      "zh-CN": "正在准备预览…"
+    },
+    {
+      "key": "play.recovery_checking",
+      "en": "Result unknown. Checking status…",
+      "zh-CN": "结果未知，正在查询状态…"
+    },
+    {
+      "key": "play.recovery_missing",
+      "en": "Result unknown. Job record unavailable. Choose New run to prepare another playback.",
+      "zh-CN": "结果未知，任务记录不可用。可选择“另行播放”，为下一轮播放做准备。"
+    },
+    {
+      "key": "play.recovery_invalid",
+      "en": "Result unknown. Status response could not be verified. Check status or choose New run.",
+      "zh-CN": "结果未知，无法验证状态响应。请查询状态，或选择另行播放。"
+    },
+    {
+      "key": "play.recovery_paused",
+      "en": "Result unknown. Automatic checks paused. Check status or choose New run.",
+      "zh-CN": "结果未知，自动查询已暂停。请查询状态，或选择另行播放。"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source_repository": "b1ug/nb1",
+  "source_commit": "c4147cef3aff1a1f9622b4c29ec84d4130aedd9e",
+  "source_directory": "internal/httpapi/demo",
+  "files": {
+    "index.html": "43cffdfdab99bbf9fce29cc12d13bda800765d1fe0a372c5cc284d077af7e670",
+    "demo.css": "a89dd8b56798cfedbc089eae09a81acb5a9f48475efefb2b38461244051920a6",
+    "demo.js": "ac474f686f261657ccf43636db30e19a515ed7260bf6800e87961745487e681f",
+    "orbit.html": "2d45e06965002f28186317e39ad7d7258f9c6bb05e903674c1db53932280a53f",
+    "orbit.css": "22a17683627af3e3a987ab537d9fc8740f231ec323ab7231a1376345416872b5",
+    "orbit.js": "8e25408d0b5d1f5649179efc090ff1555ca12f802f8920284527bf093b0cb23e"
+  }
+}

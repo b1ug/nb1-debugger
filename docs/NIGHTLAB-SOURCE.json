@@ -1,0 +1,120 @@
+{
+  "reference": "Approved Nightlab presentation",
+  "selected_appearance": "Nightlab",
+  "date": "2026-11-15",
+  "public_export_policy": "The original design snapshot is retained separately. This source export preserves approved rendering and records adaptations without exposing private source paths or internal acceptance material.",
+  "unchanged_handoff_assets": {
+    "src/nightlab/airwave-tokens.css": {
+      "handoff_path": "source/airwave-tokens.css",
+      "sha256": "ddebd8181bb960fe3e4ed2c8e4c26dfd51e60d3380e3b9d9179f50d20fb790a3"
+    },
+    "src/nightlab/studio.css": {
+      "handoff_path": "source/studio.css",
+      "sha256": "9eae598a9aee81b83f78f4e9eb7a0d3fbd6afd9b80f090868cc3d1dbde1fc3a0"
+    },
+    "src/nightlab/studio-skins.css": {
+      "handoff_path": "source/studio-skins.css",
+      "sha256": "341e2f2dc51f7ab89062b76479571d030c74f705b678af6f389ae3f887b612d0"
+    },
+    "src/nightlab/studio-appearance.js": {
+      "handoff_path": "source/studio-appearance.js",
+      "sha256": "0ebb37284d1e56cec1afdf616f253931ff480ab8401241b758a924a885a6a46c"
+    },
+    "src/nightlab/preview-timeline.js": {
+      "handoff_path": "source/preview-timeline.js",
+      "sha256": "b23ae94095100282d34c68c3dd4b7dc8aa35e27bbf061e0e1fafbfebf8eb3cc4"
+    },
+    "src/nightlab/enclosure-fit.js": {
+      "handoff_path": "source/enclosure-fit.js",
+      "sha256": "33a8c0fba98e078b9497da20289508ff5da08a4cfccc8abafbeec36a336ece99"
+    },
+    "src/nightlab/home.css": {
+      "handoff_path": "source/home.css",
+      "sha256": "75a48375d1b052ec8412b96f917cea2a43b5f52791eb6ce2514ce14d3b852520"
+    },
+    "src/nightlab/airwave.css": {
+      "handoff_path": "source/embedded/src/airwave.css",
+      "sha256": "de333a92a75ef91570b3dec65f920a001fd3eb00909e717b0b072613cff79343"
+    },
+    "src/nightlab/model-assets/seating-fit.json": {
+      "handoff_path": "source/model-assets/seating-fit.json",
+      "sha256": "04516bf501b32ff8667a1738a99fad4cfde10cb5bcfc30836841115111d0c3c5"
+    },
+    "src/nightlab/model-assets/blink1mk2_enclosure_diffuser_v3k.stl": {
+      "handoff_path": "source/model-assets/blink1mk2_enclosure_diffuser_v3k.stl",
+      "sha256": "297986ee78dee7ce5607b43edd8967cd7b9d509496261214c5c68587d892af18"
+    },
+    "src/nightlab/model-assets/LICENSE.txt": {
+      "handoff_path": "source/model-assets/LICENSE.txt",
+      "sha256": "e0a5f70deb9c79bb8533122057d00f6fb20b2c050ee63123e3e6538da329ceea"
+    },
+    "src/nightlab/model-assets/blink1mk2_enclosure_frame_v3k.stl": {
+      "handoff_path": "source/model-assets/blink1mk2_enclosure_frame_v3k.stl",
+      "sha256": "ba0797af2873c0fc4c3477b87cde07ca1b9ec761eda001b21abe101ce035b465"
+    },
+    "src/nightlab/compiler/NB1-LICENSE.txt": {
+      "handoff_path": "source/vendor/browser-compiler/NB1-LICENSE.txt",
+      "sha256": "a428d1101807989e11ae625f4316d360a27b2a922f4f6cb6ce5981e8cfeafe93"
+    },
+    "src/nightlab/compiler/GO-LICENSE.txt": {
+      "handoff_path": "source/vendor/browser-compiler/GO-LICENSE.txt",
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad"
+    },
+    "src/nightlab/compiler/wasm_exec.js": {
+      "handoff_path": "source/vendor/browser-compiler/wasm_exec.js",
+      "sha256": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14"
+    }
+  },
+  "adapted_handoff_assets": {
+    "src/nightlab/light-model.js": {
+      "handoff_path": "source/light-model.js",
+      "original_sha256": "b8231a6cd4342869cf0f7ea4f3533738b76712e452f3ec9262c436d38ffd731c",
+      "sha256": "764a0e92f26f6a6f32d00883c780965a852d335b951d9f27e2c1a316fae946e7",
+      "integration_changes": "Replace private source descriptions or internal review material with public technical notes. Raw CAD, artwork and geometry/rendering algorithms are preserved."
+    },
+    "src/nightlab/model-assets/source.json": {
+      "handoff_path": "source/model-assets/source.json",
+      "original_sha256": "34d5d2f9e129cf482be12485b34073ffbb51b8882bc000e13694a9ca503f7761",
+      "sha256": "2ad70d26bed617c673da560aada880008d388b5ca9e5520824ab6984284b211d",
+      "integration_changes": "Replace private source descriptions or internal review material with public technical notes. Raw CAD, artwork and geometry/rendering algorithms are preserved."
+    },
+    "src/nightlab/compiler/nb1.wasm": {
+      "sha256": "a96e9b898094ffca5ad6d1c8e388df8695b8d2087726aec6cbe00846e17c0790",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "src/nightlab/compiler/compiler-source.json": {
+      "sha256": "63720786f224acbfbc44d2ed95ab95dbb58df43475c72894edc440ecf1acb200",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "src/nightlab/embedded-studio.css": {
+      "handoff_path": "source/embedded/src/studio.css",
+      "sha256": "24f6dbeb550cedecf4f37afead4e26bf024e168594d67cb46280f942c75d2ab1",
+      "integration_changes": "Add semantic danger color and wrapping for authorized inline playback feedback; original handoff hash retained. Authorized mobile polish: 8/12/16 spacing, full-width branded target selection, logical DOM ordering, and supporting disclosures; four type roles and semantic palette preserved.",
+      "previous_recorded_sha256": "d05a9e01d6a96e22f17c7cb4f20e437b7b6d7e6da53f23b6925ee5f88a2dcbc5",
+      "provenance_refresh": "Previous adaptation record predates later approved UI refinements. Source bytes are unchanged from the exported production snapshot."
+    },
+    "src/nightlab/compiler/wasm_exec.js": {
+      "sha256": "0c949f4996f9a89698e4b5c586de32249c3b69b7baadb64d220073cc04acba14",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "src/nightlab/compiler/GO-LICENSE.txt": {
+      "sha256": "911f8f5782931320f5b8d1160a76365b83aea6447ee6c04fa6d5591467db9dad",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "src/nightlab/compiler/NB1-LICENSE.txt": {
+      "sha256": "a428d1101807989e11ae625f4316d360a27b2a922f4f6cb6ce5981e8cfeafe93",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "src/nightlab/compiler/COLORKIT-LICENSE.txt": {
+      "sha256": "aeb30ebfe31f295341ba5a850da50416931ab242bc225ca363a16aa7f124b05a",
+      "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    }
+  },
+  "excluded_categories": [
+    "Private source excerpts",
+    "Internal hardware acceptance records",
+    "Development screenshots and capture metadata",
+    "Internal integration instructions"
+  ],
+  "geometry_policy": "Raw ThingM STL and required LICENSE bytes are unchanged. The renderer changes only a source-description label, not geometry, material or light-field algorithms."
+}

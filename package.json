@@ -1,0 +1,28 @@
+{
+  "name": "nb1-workbench",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Embedded web workbench for nb1: local daemon control, Sequence editing and 3D light previews.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:dev": "node scripts/build.mjs --allow-dirty",
+    "check:dist": "node scripts/build.mjs --check",
+    "check:syntax": "node --check src/demo.js && node --check src/orbit.js && node --check src/patterns.js && node --check src/i18n.js && node --check src/action-icons.js && node --input-type=module --check < src/json-editor.js && node --check src/nightlab/model-notes.js",
+    "check:locales": "node scripts/check-locales.mjs",
+    "check:nightlab": "node scripts/check-nightlab.mjs"
+  },
+  "devDependencies": {
+    "@codemirror/commands": "6.11.1",
+    "@codemirror/lang-json": "6.0.2",
+    "@codemirror/language": "6.12.3",
+    "@codemirror/state": "6.7.6",
+    "@codemirror/view": "6.43.0",
+    "@lezer/highlight": "1.2.5",
+    "esbuild": "0.28.2",
+    "three": "0.187.0"
+  }
+}
