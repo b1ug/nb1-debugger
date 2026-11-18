@@ -1367,6 +1367,47 @@
       "key": "play.recovery_paused",
       "en": "Result unknown. Automatic checks paused. Check status or choose New run.",
       "zh-CN": "结果未知，自动查询已暂停。请查询状态，或选择另行播放。"
+    },
+    {
+      "key": "device.configured_target",
+      "en": "Configured: {p0} · Target: {p1}. {p2}",
+      "zh-CN": "已配置 {p0} 个设备 · 目标：{p1}。{p2}",
+      "recursive": 4
+    },
+    {
+      "key": "device.devices_read_failed",
+      "en": "Could not read devices. Refresh to check again.",
+      "zh-CN": "无法读取设备，请刷新重试。"
+    },
+    {
+      "key": "device.target_unconfigured",
+      "en": "Target is no longer configured. Choose a device.",
+      "zh-CN": "当前目标已不在配置中，请选择设备。"
+    },
+    {
+      "key": "device.offline_diagnostics",
+      "en": "Device is offline. Check USB or daemon diagnostics.",
+      "zh-CN": "设备离线，请检查 USB 连接或 daemon 诊断。"
+    },
+    {
+      "key": "device.not_ready_diagnostics",
+      "en": "Device is not ready. Refresh or check daemon diagnostics.",
+      "zh-CN": "设备尚未就绪，请刷新或查看 daemon 诊断。"
+    },
+    {
+      "key": "device.connecting",
+      "en": "Connecting",
+      "zh-CN": "连接中"
+    },
+    {
+      "key": "device.busy",
+      "en": "Busy",
+      "zh-CN": "忙碌"
+    },
+    {
+      "key": "device.unavailable",
+      "en": "Unavailable",
+      "zh-CN": "不可用"
     }
   ]
 }
