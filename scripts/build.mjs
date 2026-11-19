@@ -43,8 +43,22 @@ function inventory(directory, allowed) {
   }
   walk(directory); return result.sort();
 }
+// The model is a build-time dependency. Preserve its logical runtime paths
+// so saved URLs and nb1's offline bundle inventory stay stable.
+const modelDirectory = 'node_modules/@b1ug/blink1-models/models/mk2';
+const modelManifest = fs.readFileSync(path.join(root, modelDirectory, 'manifest.json'));
+if (hash(modelManifest) !== '8da04a0b8af074ad9f559921bd19c3a2fe0e6522d479012c3373b95d383bf38a') fail('Unexpected MK2 model manifest');
+const modelSources = new Map();
+for (const [relative, record] of Object.entries(JSON.parse(modelManifest).files)) {
+  const logical = 'nightlab/' + relative;
+  if (!names.includes(logical)) fail('Unexpected MK2 model file: ' + logical);
+  const filename = path.join(modelDirectory, relative);
+  const bytes = fs.readFileSync(path.join(root, filename));
+  if (bytes.length !== record.bytes || hash(bytes) !== record.sha256) fail('MK2 model integrity mismatch: ' + relative);
+  modelSources.set(logical, filename);
+}
 const sourceNames = inventory(path.join(root, 'src'), names);
-if (JSON.stringify(sourceNames) !== JSON.stringify(names.filter(name => !['locales.js', 'editor-LICENSES.txt'].includes(name)).sort())) fail('Unexpected or missing src file; update the reviewed asset contract explicitly');
+if (JSON.stringify(sourceNames) !== JSON.stringify(names.filter(name => !modelSources.has(name) && !['locales.js', 'editor-LICENSES.txt'].includes(name)).sort())) fail('Unexpected or missing src file; update the reviewed asset contract explicitly');
 // Bundle only the selected JSON editor extensions. There are no runtime imports
 // or downloads; all third-party license texts travel with the static bundle.
 const editor = buildSync({ absWorkingDir: root, entryPoints: ['src/json-editor.js'], bundle: true,
@@ -74,7 +88,7 @@ const viewer = buildSync({absWorkingDir:root, entryPoints:['src/nightlab/studio-
   write:false, metafile:true, legalComments:'none', logLevel:'silent'});
 if (viewer.outputFiles.length !== 1 || Object.values(viewer.metafile.outputs).some(value=>value.imports.length)) fail('The viewer must be a single local module');
 for(const input of Object.keys(viewer.metafile.inputs)) {
-  if (!input.startsWith('node_modules/three/') && !['src/nightlab/studio-3d.js','src/nightlab/light-model.js','src/nightlab/enclosure-fit.js'].includes(input)) fail(`Unreviewed viewer input: ${input}`);
+  if (!input.startsWith('node_modules/three/') && !['src/nightlab/studio-3d.js',modelSources.get('nightlab/light-model.js'),modelSources.get('nightlab/enclosure-fit.js')].includes(input)) fail(`Unreviewed viewer input: ${input}`);
 }
 const files = new Map();
 const compilerDirectory = path.join(root, 'src/nightlab/compiler');
@@ -93,7 +107,7 @@ for (const name of names) {
     if (!stat.isFile() || stat.nlink !== 1 || stat.isSymbolicLink()) fail('Locale catalog must be a private regular source file');
     files.set(name, compileCatalog(JSON.parse(fs.readFileSync(catalogPath, 'utf8')))); continue;
   }
-  const source = path.join(root, 'src', name);
+  const source = path.join(root, modelSources.get(name) ?? path.join('src', name));
   const stat = fs.lstatSync(source);
   if (!stat.isFile() || stat.nlink !== 1 || stat.isSymbolicLink()) fail(`Source must be a private regular file: ${name}`);
   const bytes = fs.readFileSync(source);
@@ -155,7 +169,7 @@ const entries = [...files].sort(([a], [b]) => a < b ? -1 : a > b ? 1 : 0).map(([
 const tree = entries.map(f => `${f.path}\0${f.sha256}\n`).join('');
 const manifest = {
   schema_version: 2, product: 'nb1-web', asset_base: './',
-  source: { repository: 'https://github.com/b1ug/nb1-workbench', commit, dirty, tree_sha256: hash(tree) },
+  source: { repository: 'https://github.com/b1ug/nb1-debugger', commit, dirty, tree_sha256: hash(tree) },
   build: { tool: 'static-nightlab/v1', node: process.version, lockfile_sha256: hash(fs.readFileSync(path.join(root, 'package-lock.json'))) },
   api_contracts: ['nb1-api/v1'], files: entries
 };

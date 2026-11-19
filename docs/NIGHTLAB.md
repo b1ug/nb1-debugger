@@ -16,7 +16,7 @@ The displayed enclosure, connector and light field are illustrative. The origina
 
 ## Closed bundle
 
-`scripts/nightlab-assets.mjs` declares the exact Nightlab inventory, gzip set and optional-asset classification. The schema-v2 manifest uses `static-nightlab/v1`, canonical source URL `https://github.com/b1ug/nb1-workbench`, a full clean commit and stored/decoded hashes. Its product identifier remains `nb1-web`.
+`scripts/nightlab-assets.mjs` declares the exact Nightlab inventory, gzip set and optional-asset classification. The schema-v2 manifest uses `static-nightlab/v1`, canonical source URL `https://github.com/b1ug/nb1-debugger`, a full clean commit and stored/decoded hashes. Its product identifier remains `nb1-web`.
 
 Limits, including the manifest, are **768 KiB decoded base UI**, **6 MiB total stored**, and **16 MiB total decoded**. Selected Three.js/WASM/STL assets use deterministic gzip. A matching nb1 host verifies and decodes them before serving. All HTML retains one canonical style nonce; the editor receives that nonce. Never weaken CSP, integrity or budgets to import a bundle.
 

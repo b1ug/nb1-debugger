@@ -1,4 +1,4 @@
-name: Embedded workbench source and bundle
+name: Debugger source and bundle
 on:
   push:
     branches: [main]
