@@ -10,7 +10,7 @@
 nb1 server --devices YOUR_DEVICE_SERIAL
 ```
 
-浏览器打开 <http://127.0.0.1:8931/demo/>。预览可选，播放会直接验证并提交当前草稿。Web、CLI 和 MCP 共享同一个 daemon 的设备执行核心；本界面通过同源 HTTP 请求控制，不使用 WebHID，也不自动安装或启动 daemon。
+nb1 v0.1.3 的默认调试地址是 <http://127.0.0.1:5885/demo/>。v0.1.2 使用 <http://127.0.0.1:8931/demo/>。如果设置过监听端口，请使用配置中的地址。预览可选，播放会直接验证并提交当前草稿。Web、CLI 和 MCP 共享同一个 daemon 的设备执行核心；本界面通过同源 HTTP 请求控制，不使用 WebHID，也不自动安装或启动 daemon。
 
 ## 几个项目的区别
 
