@@ -23,6 +23,9 @@
   const recoveryDelays = [1000, 2000, 4000];
   let localColors = [];
   let devices = [], refreshGeneration = 0, deviceReady = false, deviceIssue = "Reading the local service…";
+  let flashSupported = false;
+  const flashPending = new Set();
+  const flashOutcomes = new Map();
   const outputs = new Map(), actionDrafts = new Map();
   const colorSaves = Object.fromEntries(["a", "b"].map(suffix => [suffix, {key: null, color: null, pending: false, saving: false, unknown: null, generation: 0, timer: null, controller: null}]));
   const patternSave = {pending: false, unknown: false, capture: null};
@@ -68,7 +71,7 @@
     else options.signal?.addEventListener("abort", abort, {once: true});
     try {
       let response;
-      try { response = await fetch(path, {method, body, headers: body === undefined ? {} : {"Content-Type": "application/json"}, cache: "no-store", credentials: "same-origin", redirect: "error", signal: controller.signal}); }
+      try { response = await fetch(path, {method, body, headers: body === undefined ? {} : {"Content-Type": "application/json", ...options.headers}, cache: "no-store", credentials: "same-origin", redirect: "error", signal: controller.signal}); }
       catch (error) { if (error instanceof TypeError || error.name === "AbortError") error.lookupTransient = true; throw error; }
       if (!/^application\/json\b/i.test(response.headers.get("content-type") || "")) throw Error("Expected a JSON response");
       const reader = response.body.getReader(), chunks = []; let size = 0;
@@ -88,6 +91,8 @@
         if (!value?.error || typeof value.error.code !== "string" || typeof value.error.message !== "string") throw Error("Invalid error response");
         const error = Error(response.status + " " + value.error.code + ": " + value.error.message);
         error.httpStatus = response.status;
+        error.code = value.error.code;
+        error.result = value.result;
         error.rejected = ({400: ["invalid_request"], 404: ["not_found"], 409: ["device_busy", "job_conflict"], 422: ["unsupported_capability"], 429: ["job_capacity"]})[response.status]?.includes(value.error.code) || false;
         throw error;
       }
@@ -249,7 +254,49 @@
     for (const suffix of ["a", "b"]) scheduleColorSource(suffix);
     updateButtons();
   }
+  function updateFlashControl() {
+    const button = $("flash-reset");
+    if (!button) return;
+    const id = $("device-select").value;
+    const issue = !deviceReady ? deviceIssue : !flashSupported ? "Flash reset is unavailable for this device and daemon." : "";
+    text("flash-target", id ? "Replaces the saved pattern on " + id + "." : "Choose a device.");
+    button.disabled = flashPending.has(id) || !deviceReady || !flashSupported || !/^[0-9a-f]{8}$/i.test(id);
+    text("flash-availability", issue);
+    const outcome = flashOutcomes.get(id);
+    text("flash-last-preset", outcome ? outcome.preset[0].toUpperCase() + outcome.preset.slice(1) : "");
+    text("flash-message", outcome?.message || "");
+  }
+  async function resetFlash() {
+    if ($("flash-reset").disabled) return;
+    const id = $("device-select").value, preset = $("flash-preset").value;
+    flashPending.add(id);
+    flashOutcomes.set(id, {preset, message: "Writing Flash…"});
+    updateFlashControl();
+    let submitted = false;
+    try {
+      const path = "/v1/devices/" + id + "/flash/";
+      const {value: permit} = await request(path + "reset-ticket");
+      if (!/^[0-9a-f]{32}$/.test(permit?.ticket || "")) throw Error("Invalid Flash ticket");
+      submitted = true;
+      const {status, value} = await request(path + "reset", "POST", JSON.stringify({preset}), {headers: {"X-NB1-Flash-Ticket": permit.ticket}});
+      if (status !== 200 || value?.serial !== id || value.preset !== preset || value.status !== "acknowledged" ||
+          !Number.isInteger(value.lines) || value.lines < 1 || value.verified !== value.lines || value.staged !== value.lines) throw Error("Invalid Flash receipt");
+      flashOutcomes.set(id, {preset, message: "Save acknowledged. Power-cycle to verify the startup pattern."});
+    } catch (error) {
+      let message = "Save unconfirmed. Check the startup pattern after a power cycle before writing again.";
+      if (!submitted) message = "Could not prepare this reset. No Flash write was requested.";
+      else if (error.code === "flash_ticket_used_or_expired") message = "The reset ticket is no longer active. Check the startup pattern before writing again.";
+      else if (error.code === "flash_staging_failed" && error.result?.serial === id && error.result.preset === preset && error.result.status === "staging_failed") message = "Flash was not saved. Some staged RAM rows may have changed.";
+      else if (error.code === "device_busy") message = "Stop playback and wait for this device to be idle.";
+      else if ((error.httpStatus >= 400 && error.httpStatus < 500) || error.code === "flash_reset_unsupported" || error.code === "device_offline") message = error.message;
+      flashOutcomes.set(id, {preset, message});
+    } finally {
+      flashPending.delete(id);
+      updateFlashControl();
+    }
+  }
   function updateButtons() {
+    updateFlashControl();
     const waiting = task && (task.unknown || !task.rejected && !terminal(task.job?.status));
     $("play").disabled = submitting || previewing || waiting || !deviceReady || !serial.test($("device-select").value);
     $("play").setAttribute("aria-busy", String(submitting));
@@ -725,6 +772,7 @@
     }
     if (generation !== deviceGeneration || id !== $("device-select").value) return;
     deviceReady = value.connection === "online";
+    flashSupported = Array.isArray(value.capabilities) && value.capabilities.includes("flash-reset");
     const labels = {online: "Online", offline: "Offline", connecting: "Connecting", busy: "Busy", error: "Failed"};
     $("connection").textContent = labels[value.connection] || "Unavailable"; $("connection").dataset.state = deviceReady ? "online" : "offline";
     if (deviceReady && textSources.get($("play-feedback")) === deviceIssue) playFeedback("");
@@ -881,6 +929,7 @@
   $("pattern-select").addEventListener("change", () => { loaded = null; $("edit-sequence").disabled = true; invalidate(); });
   bind("use-sequence", () => { if (preview) { sequenceEditor.setValue(JSON.stringify(preview.sequence, null, 2)); changeMode("sequence"); } });
   bind("preview", previewDraft, reportDraft); bind("play", play); bind("query", queryJob); bind("play-query", queryJob); bind("stop", stopJob);
+  if ($("flash-reset")) bind("flash-reset", resetFlash);
   bind("refresh", refreshDevices); bind("sequence-colors-refresh", refreshColors); bind("patterns-refresh", refreshPatterns); bind("load-pattern", () => readPattern());
   bind("copy-color-reference", copyColorReference); $("sequence-local-color").addEventListener("change", updateSequenceReference);
   bind("edit-sequence", () => { if (loaded) { sequenceEditor.setValue(JSON.stringify(loaded.sequence, null, 2)); changeMode("sequence"); } });

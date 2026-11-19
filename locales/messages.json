@@ -1408,6 +1408,76 @@
       "key": "device.unavailable",
       "en": "Unavailable",
       "zh-CN": "不可用"
+    },
+    {
+      "key": "flash.title",
+      "en": "Device Flash",
+      "zh-CN": "设备 Flash"
+    },
+    {
+      "key": "flash.preset",
+      "en": "Startup preset",
+      "zh-CN": "上电预设"
+    },
+    {
+      "key": "flash.stars",
+      "en": "Starlight",
+      "zh-CN": "星光"
+    },
+    {
+      "key": "flash.flies",
+      "en": "Fireflies",
+      "zh-CN": "流萤"
+    },
+    {
+      "key": "flash.apply",
+      "en": "Reset Flash",
+      "zh-CN": "重置 Flash"
+    },
+    {
+      "key": "flash.target",
+      "en": "Replaces the saved pattern on {p0}.",
+      "zh-CN": "将替换设备 {p0} 已保存的灯效。"
+    },
+    {
+      "key": "flash.unsupported",
+      "en": "Flash reset is unavailable for this device and daemon.",
+      "zh-CN": "这台设备或当前服务不支持 Flash 重置。"
+    },
+    {
+      "key": "flash.writing",
+      "en": "Writing Flash…",
+      "zh-CN": "正在写入 Flash…"
+    },
+    {
+      "key": "flash.ack",
+      "en": "Save acknowledged. Power-cycle to verify the startup pattern.",
+      "zh-CN": "设备已应答。重新上电可核验启动灯效。"
+    },
+    {
+      "key": "flash.unknown",
+      "en": "Save unconfirmed. Check the startup pattern after a power cycle before writing again.",
+      "zh-CN": "保存结果待核验。再次写入前，请重新上电检查启动灯效。"
+    },
+    {
+      "key": "flash.staging",
+      "en": "Flash was not saved. Some staged RAM rows may have changed.",
+      "zh-CN": "尚未保存到 Flash，部分 RAM 行可能已改变。"
+    },
+    {
+      "key": "flash.busy",
+      "en": "Stop playback and wait for this device to be idle.",
+      "zh-CN": "请停止播放，等这只灯空闲后再操作。"
+    },
+    {
+      "key": "flash.prepare",
+      "en": "Could not prepare this reset. No Flash write was requested.",
+      "zh-CN": "重置准备失败，尚未发起 Flash 写入。"
+    },
+    {
+      "key": "flash.replay",
+      "en": "The reset ticket is no longer active. Check the startup pattern before writing again.",
+      "zh-CN": "本次重置凭据已失效。再次写入前，请重新上电检查启动灯效。"
     }
   ]
 }

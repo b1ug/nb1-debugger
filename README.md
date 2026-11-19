@@ -14,6 +14,8 @@ nb1 server --devices YOUR_DEVICE_SERIAL
 
 For nb1 v0.1.3, open <http://127.0.0.1:5885/demo/>. For v0.1.2, open <http://127.0.0.1:8931/demo/>. If you configured another listen port, use that port. Preview is optional; Play validates and submits the current draft directly. The same daemon owns the devices for Web, CLI and MCP clients. This page uses same-origin HTTP, has no WebHID connection and does not install or start a daemon.
 
+With a daemon that advertises `flash-reset`, open **Device Flash** to replace the selected lamp’s stored startup pattern with Off, Rainbow, Starlight or Fireflies. The button names the persistent operation. A save acknowledgment and power-cycle verification are distinct.
+
 ## Which project does what?
 
 | Project | Responsibility |
