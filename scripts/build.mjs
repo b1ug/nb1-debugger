@@ -4,7 +4,7 @@ import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import { execFileSync } from 'node:child_process';
 import { compileCatalog } from './catalog.mjs';
-import { buildSync } from 'esbuild';
+import { buildSync, transformSync } from 'esbuild';
 import { gzipSync } from 'node:zlib';
 import { nightlabNames, gzipNames, optionalNames } from './nightlab-assets.mjs';
 
@@ -111,6 +111,12 @@ for (const name of names) {
   const stat = fs.lstatSync(source);
   if (!stat.isFile() || stat.nlink !== 1 || stat.isSymbolicLink()) fail(`Source must be a private regular file: ${name}`);
   const bytes = fs.readFileSync(source);
+  // Compact the served workbench script within the existing base UI budget.
+  if (name === 'demo.js') {
+    const output = transformSync(bytes, {loader: 'js', minifyWhitespace: true, charset: 'utf8'});
+    files.set(name, Buffer.from(output.code));
+    continue;
+  }
   if (name.endsWith('.woff2')) {
     if (bytes.subarray(0, 4).toString('ascii') !== 'wOF2' || bytes.length > 48 * 1024) fail(`Invalid or oversized local font: ${name}`);
     files.set(name, bytes); continue;
