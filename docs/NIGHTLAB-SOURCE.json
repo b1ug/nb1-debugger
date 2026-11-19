@@ -24,7 +24,7 @@
       "handoff_path": "source/preview-timeline.js",
       "sha256": "b23ae94095100282d34c68c3dd4b7dc8aa35e27bbf061e0e1fafbfebf8eb3cc4"
     },
-    "src/nightlab/enclosure-fit.js": {
+    "node_modules/@b1ug/blink1-models/models/mk2/enclosure-fit.js": {
       "handoff_path": "source/enclosure-fit.js",
       "sha256": "33a8c0fba98e078b9497da20289508ff5da08a4cfccc8abafbeec36a336ece99"
     },
@@ -36,19 +36,19 @@
       "handoff_path": "source/embedded/src/airwave.css",
       "sha256": "de333a92a75ef91570b3dec65f920a001fd3eb00909e717b0b072613cff79343"
     },
-    "src/nightlab/model-assets/seating-fit.json": {
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/seating-fit.json": {
       "handoff_path": "source/model-assets/seating-fit.json",
       "sha256": "04516bf501b32ff8667a1738a99fad4cfde10cb5bcfc30836841115111d0c3c5"
     },
-    "src/nightlab/model-assets/blink1mk2_enclosure_diffuser_v3k.stl": {
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/blink1mk2_enclosure_diffuser_v3k.stl": {
       "handoff_path": "source/model-assets/blink1mk2_enclosure_diffuser_v3k.stl",
       "sha256": "297986ee78dee7ce5607b43edd8967cd7b9d509496261214c5c68587d892af18"
     },
-    "src/nightlab/model-assets/LICENSE.txt": {
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/LICENSE.txt": {
       "handoff_path": "source/model-assets/LICENSE.txt",
       "sha256": "e0a5f70deb9c79bb8533122057d00f6fb20b2c050ee63123e3e6538da329ceea"
     },
-    "src/nightlab/model-assets/blink1mk2_enclosure_frame_v3k.stl": {
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/blink1mk2_enclosure_frame_v3k.stl": {
       "handoff_path": "source/model-assets/blink1mk2_enclosure_frame_v3k.stl",
       "sha256": "ba0797af2873c0fc4c3477b87cde07ca1b9ec761eda001b21abe101ce035b465"
     },
@@ -66,13 +66,13 @@
     }
   },
   "adapted_handoff_assets": {
-    "src/nightlab/light-model.js": {
+    "node_modules/@b1ug/blink1-models/models/mk2/light-model.js": {
       "handoff_path": "source/light-model.js",
       "original_sha256": "b8231a6cd4342869cf0f7ea4f3533738b76712e452f3ec9262c436d38ffd731c",
       "sha256": "764a0e92f26f6a6f32d00883c780965a852d335b951d9f27e2c1a316fae946e7",
       "integration_changes": "Replace private source descriptions or internal review material with public technical notes. Raw CAD, artwork and geometry/rendering algorithms are preserved."
     },
-    "src/nightlab/model-assets/source.json": {
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/source.json": {
       "handoff_path": "source/model-assets/source.json",
       "original_sha256": "34d5d2f9e129cf482be12485b34073ffbb51b8882bc000e13694a9ca503f7761",
       "sha256": "2ad70d26bed617c673da560aada880008d388b5ca9e5520824ab6984284b211d",

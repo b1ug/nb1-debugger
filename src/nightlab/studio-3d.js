@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { STLLoader } from 'three/addons/loaders/STLLoader.js';
-import { createBlink1Model } from './light-model.js';
+import { createBlink1Model } from '@b1ug/blink1-models/models/mk2/light-model.js';
 
 // This viewer changes the camera and object pose, never the authored light request.
 function init() {

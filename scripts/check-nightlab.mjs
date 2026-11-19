@@ -8,7 +8,7 @@ const root=new URL('../',import.meta.url),sha=bytes=>createHash('sha256').update
 const manifestBytes=fs.readFileSync(new URL('dist/manifest.json',root));
 const manifest=JSON.parse(manifestBytes);
 assert.equal(manifest.schema_version,2);assert.equal(manifest.build.tool,'static-nightlab/v1');
-assert.equal(manifest.source.repository,'https://github.com/b1ug/nb1-workbench');
+assert.equal(manifest.source.repository,'https://github.com/b1ug/nb1-debugger');
 assert.deepEqual(Object.keys(manifest).sort(),['api_contracts','asset_base','build','files','product','schema_version','source']);
 assert.ok(nightlabNames.every(name=>manifest.files.some(file=>file.path===name)));
 let stored=manifestBytes.length,decoded=manifestBytes.length,base=manifestBytes.length;
@@ -32,8 +32,11 @@ for(const file of manifest.files){
 }
 assert.ok(stored<=6*1024*1024);assert.ok(decoded<=16*1024*1024);assert.ok(base<=768*1024);
 const tree=manifest.files.map(file=>`${file.path}\0${file.sha256}\n`).join('');assert.equal(sha(tree),manifest.source.tree_sha256);
-const source=JSON.parse(fs.readFileSync(new URL('src/nightlab/model-assets/source.json',root)));
-for(const file of source.assets)assert.equal(sha(fs.readFileSync(new URL('src/nightlab/model-assets/'+file.file,root))),file.sha256,file.file);
+const source=JSON.parse(fs.readFileSync(new URL('dist/nightlab/model-assets/source.json',root)));
+for (const file of source.assets) {
+  const asset = manifest.files.find(item => item.path === 'nightlab/model-assets/' + file.file);
+  assert.equal(asset?.decoded_sha256, file.sha256, file.file);
+}
 const loader=fs.readFileSync(new URL('src/nightlab/compiler-loader.js',root),'utf8');
 assert.match(loader,/new Set\(\['info', 'planSequence'\]\)/);
 assert.doesNotMatch(fs.readFileSync(new URL('src/nightlab/studio-preview.js',root),'utf8'),/callCompiler\(['"](?:resolveColor|compileAction|compileRequest)/);

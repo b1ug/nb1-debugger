@@ -1,4 +1,4 @@
-# nb1 Embedded Workbench
+# nb1 Debugger
 
 - Maintain source in `src/`; `dist/` is generated. Never edit dist manually.
 - Use Action, Sequence, Step, Job, Pattern and DeviceSequence terminology and the confirmed API v1 contracts. Keep protocol behavior explicit when changing presentation.
