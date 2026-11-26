@@ -9,6 +9,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "preview": "node scripts/preview.mjs",
     "build:dev": "node scripts/build.mjs --allow-dirty",
     "check:dist": "node scripts/build.mjs --check",
     "check:syntax": "node --check src/demo.js && node --check src/orbit.js && node --check src/patterns.js && node --check src/i18n.js && node --check src/action-icons.js && node --input-type=module --check < src/json-editor.js && node --check src/nightlab/model-notes.js",
@@ -16,7 +17,7 @@
     "check:nightlab": "node scripts/check-nightlab.mjs"
   },
   "devDependencies": {
-    "@b1ug/blink1-models": "https://codeload.github.com/b1ug/blink1-models/tar.gz/dc531ccaa88e031faf6c0cd32e0102d9a18e9b8d",
+    "@b1ug/blink1-models": "https://codeload.github.com/b1ug/blink1-models/tar.gz/7be4133489b734314aba9f0fff944b57b7d21791",
     "@codemirror/commands": "6.11.1",
     "@codemirror/lang-json": "6.0.2",
     "@codemirror/language": "6.12.3",

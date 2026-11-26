@@ -38,7 +38,9 @@ npm run check:nightlab
 
 `build` 要求干净的已提交源码；未提交草稿用 `npm run build:dev`，其 manifest 标记 dirty，不能导入正式内嵌包。`dist/` 是生成结果，不提交到本前端仓库。
 
-MK2 模型由 [blink1-models](https://github.com/b1ug/blink1-models) 维护。npm 按锁文件安装固定提交，构建时校验模型清单及七个文件，将模型、CAD 署名与许可一起装入离线包。其他构建依赖有 CodeMirror、esbuild 和 Three.js。页面使用 HTML、CSS 与 JavaScript，没有额外 UI 框架运行时。普通前端构建不需要 Go：屏幕预览使用已固定源码的 Go/WASM 产物、匹配运行时及许可；源码与重新生成流程由 Browser Tools 维护，[编译器来源](src/nightlab/compiler/compiler-source.json)记录实际 core 提交和文件哈希。
+构建后运行 `npm run preview`，打开 http://127.0.0.1:4180/，可分别调节两颗 LED 的屏幕颜色，查看工作台使用的完整装配效果。此本地预览无需连接设备。
+
+MK2 模型由 [blink1-models](https://github.com/b1ug/blink1-models) 维护。npm 按锁文件安装固定提交，构建时校验清单及其中的 11 个文件，将完整装配的电路板、扩散罩以及 CAD 和 PCB 的署名与许可一同装入离线包。其他构建依赖有 CodeMirror、esbuild 和 Three.js。页面使用 HTML、CSS 与 JavaScript，没有额外 UI 框架运行时。普通前端构建不需要 Go：屏幕预览使用已固定源码的 Go/WASM 产物、匹配运行时及许可；源码与重新生成流程由 Browser Tools 维护，[编译器来源](src/nightlab/compiler/compiler-source.json)记录实际 core 提交和文件哈希。
 
 运行时不需要 Node、npm、CDN、远程字体或启动下载。最终验证与颜色解析由 nb1 完成，WASM loader 只开放 `info`／`planSequence`，不会独立控制硬件。
 
@@ -50,4 +52,4 @@ schema-v2 manifest 绑定规范仓库地址、完整干净提交、存储／解�
 
 部分大型资源以确定性 gzip 储存在逻辑文件名下，必须由匹配的 nb1 importer 校验并提供解码内容，不能直接把 `dist/` 放到普通静态服务器或 GitHub Pages 当调试器。Go 原生构建只使用已审核、提交到主机仓库的内嵌 dist，不会自动克隆本仓库、拉取 submodule、运行 npm 或编译 WASM。
 
-许可与详细合同见英文 README 的对应链接。项目代码／形象使用 MIT；ThingM CAD 与派生显示装配保留 CC-BY-SA-4.0 署名，Three.js 使用 MIT，字体保留 SIL OFL，Go 预览模块与运行时保留各自许可。批准形象、原始 STL 和必要许可字节不变；私有笔记、设备标识、内部验收、开发截图和未选形象不进入公开导出。
+许可与详细合同见英文 README 的对应链接。项目代码／形象使用 MIT；ThingM CAD 与派生显示装配保留 CC-BY-SA-4.0 署名，PCB 布局及派生几何使用 CC BY-SA 3.0，Three.js 使用 MIT，字体保留 SIL OFL，Go 预览模块与运行时保留各自许可。批准形象、原始 STL 和必要许可字节不变；私有笔记、设备标识、内部验收、开发截图和未选形象不进入公开导出。

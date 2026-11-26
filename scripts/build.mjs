@@ -47,7 +47,7 @@ function inventory(directory, allowed) {
 // so saved URLs and nb1's offline bundle inventory stay stable.
 const modelDirectory = 'node_modules/@b1ug/blink1-models/models/mk2';
 const modelManifest = fs.readFileSync(path.join(root, modelDirectory, 'manifest.json'));
-if (hash(modelManifest) !== '8da04a0b8af074ad9f559921bd19c3a2fe0e6522d479012c3373b95d383bf38a') fail('Unexpected MK2 model manifest');
+if (hash(modelManifest) !== '463635d56bc279abb88e19554370c5b9b9e6fe1c4fb9bf78917b6b1c43956a13') fail('Unexpected MK2 model manifest');
 const modelSources = new Map();
 for (const [relative, record] of Object.entries(JSON.parse(modelManifest).files)) {
   const logical = 'nightlab/' + relative;
@@ -79,7 +79,7 @@ for (const name of [...packages].sort()) {
   if (info.license !== 'MIT') fail(`Review editor license before bundling: ${name}`);
   editorNotices += `${name} ${info.version}\n${fs.readFileSync(path.join(directory, 'LICENSE'), 'utf8').trim()}\n\n`;
 }
-// Bundle the unchanged approved model, light field and corrected enclosure into
+// Bundle the verified PCB, optical solver and enclosure with the viewer into
 // one local module. Raw STL loads keep their module-relative logical paths.
 const threeInfo = JSON.parse(fs.readFileSync(path.join(root, 'node_modules/three/package.json'), 'utf8'));
 if (threeInfo.version !== '0.187.0' || threeInfo.license !== 'MIT') fail('Unreviewed Three.js package');
@@ -87,8 +87,9 @@ const viewer = buildSync({absWorkingDir:root, entryPoints:['src/nightlab/studio-
   minify:true, format:'esm', platform:'browser', target:['es2020'], charset:'utf8',
   write:false, metafile:true, legalComments:'none', logLevel:'silent'});
 if (viewer.outputFiles.length !== 1 || Object.values(viewer.metafile.outputs).some(value=>value.imports.length)) fail('The viewer must be a single local module');
+const viewerInputs = new Set(['src/nightlab/studio-3d.js', ...modelSources.values()]);
 for(const input of Object.keys(viewer.metafile.inputs)) {
-  if (!input.startsWith('node_modules/three/') && !['src/nightlab/studio-3d.js',modelSources.get('nightlab/light-model.js'),modelSources.get('nightlab/enclosure-fit.js')].includes(input)) fail(`Unreviewed viewer input: ${input}`);
+  if (!input.startsWith('node_modules/three/') && !viewerInputs.has(input)) fail(`Unreviewed viewer input: ${input}`);
 }
 const files = new Map();
 const compilerDirectory = path.join(root, 'src/nightlab/compiler');
@@ -173,7 +174,8 @@ const manifest = {
   build: { tool: 'static-nightlab/v1', node: process.version, lockfile_sha256: hash(fs.readFileSync(path.join(root, 'package-lock.json'))) },
   api_contracts: ['nb1-api/v1'], files: entries
 };
-const encoded = Buffer.from(JSON.stringify(manifest, null, 2) + '\n');
+// The manifest is part of the base UI budget, including records for optional 3D files.
+const encoded = Buffer.from(JSON.stringify(manifest) + '\n');
 files.set('manifest.json', encoded);
 const total = [...files.values()].reduce((sum, b) => sum + b.length, 0);
 const decodedTotal = encoded.length + [...decodedFiles.values()].reduce((sum, bytes)=>sum+bytes.length,0);

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" data-nb1-app="embedded">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>nb1 Debugger · Model review</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/demo/typography.css">
+  <link rel="stylesheet" href="/demo/nightlab/studio.css">
+  <link rel="stylesheet" href="/demo/nightlab/embedded-studio.css">
+  <style>main { max-width: 52rem; margin: 2rem auto; padding: 0 1rem; } fieldset { margin: 1rem 0; } label { margin-right: 1rem; }</style>
+</head>
+<body><main>
+  <h1>nb1 Debugger model review</h1>
+  <fieldset><legend>Screen preview</legend>
+    <label><input type="checkbox" id="one" checked> LED 1 · Blue</label>
+    <label><input type="checkbox" id="two" checked> LED 2 · Red</label>
+  </fieldset>
+  <section class="light-stage" data-light-stage aria-label="Assembled blink(1) mk2"></section>
+  <nav aria-label="Debugger pages"><a href="/demo/">Home</a> · <a href="/demo/orbit.html">Orbit</a> · <a href="/demo/patterns.html">Patterns</a></nav>
+</main>
+<script src="/demo/nightlab/studio.js"></script>
+<script type="module" src="/demo/nightlab/studio-3d.js"></script>
+<script>
+  const one = document.querySelector('#one'), two = document.querySelector('#two');
+  function showColors() {
+    const colors = [one.checked ? '#003dff' : '#000000', two.checked ? '#ff1804' : '#000000'];
+    window.dispatchEvent(new CustomEvent('nb1-screen-preview', { detail: { active: true, colors } }));
+  }
+  one.addEventListener('change', showColors);
+  two.addEventListener('change', showColors);
+  showColors();
+</script>
+</body></html>
