@@ -33,9 +33,15 @@ for(const file of manifest.files){
 assert.ok(stored<=6*1024*1024);assert.ok(decoded<=16*1024*1024);assert.ok(base<=768*1024);
 const tree=manifest.files.map(file=>`${file.path}\0${file.sha256}\n`).join('');assert.equal(sha(tree),manifest.source.tree_sha256);
 const source=JSON.parse(fs.readFileSync(new URL('dist/nightlab/model-assets/source.json',root)));
+const modelManifest=JSON.parse(fs.readFileSync(new URL('node_modules/@b1ug/blink1-models/models/mk2/manifest.json',root)));
 for (const file of source.assets) {
   const asset = manifest.files.find(item => item.path === 'nightlab/model-assets/' + file.file);
-  assert.equal(asset?.decoded_sha256, file.sha256, file.file);
+  // Derived layout and PCB notice entries describe their upstream sources.
+  // The pinned model manifest binds the actual distributed bytes.
+  const record=modelManifest.files['model-assets/' + file.file];
+  assert.ok(asset && record, file.file);
+  assert.equal(asset.decoded_sha256, record.sha256, file.file);
+  if (file.sha256) assert.equal(asset.decoded_sha256, file.sha256, file.file);
 }
 const loader=fs.readFileSync(new URL('src/nightlab/compiler-loader.js',root),'utf8');
 assert.match(loader,/new Set\(\['info', 'planSequence'\]\)/);

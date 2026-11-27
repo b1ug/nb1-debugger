@@ -24,10 +24,6 @@
       "handoff_path": "source/preview-timeline.js",
       "sha256": "b23ae94095100282d34c68c3dd4b7dc8aa35e27bbf061e0e1fafbfebf8eb3cc4"
     },
-    "node_modules/@b1ug/blink1-models/models/mk2/enclosure-fit.js": {
-      "handoff_path": "source/enclosure-fit.js",
-      "sha256": "33a8c0fba98e078b9497da20289508ff5da08a4cfccc8abafbeec36a336ece99"
-    },
     "src/nightlab/home.css": {
       "handoff_path": "source/home.css",
       "sha256": "75a48375d1b052ec8412b96f917cea2a43b5f52791eb6ce2514ce14d3b852520"
@@ -35,10 +31,6 @@
     "src/nightlab/airwave.css": {
       "handoff_path": "source/embedded/src/airwave.css",
       "sha256": "de333a92a75ef91570b3dec65f920a001fd3eb00909e717b0b072613cff79343"
-    },
-    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/seating-fit.json": {
-      "handoff_path": "source/model-assets/seating-fit.json",
-      "sha256": "04516bf501b32ff8667a1738a99fad4cfde10cb5bcfc30836841115111d0c3c5"
     },
     "node_modules/@b1ug/blink1-models/models/mk2/model-assets/blink1mk2_enclosure_diffuser_v3k.stl": {
       "handoff_path": "source/model-assets/blink1mk2_enclosure_diffuser_v3k.stl",
@@ -69,14 +61,14 @@
     "node_modules/@b1ug/blink1-models/models/mk2/light-model.js": {
       "handoff_path": "source/light-model.js",
       "original_sha256": "b8231a6cd4342869cf0f7ea4f3533738b76712e452f3ec9262c436d38ffd731c",
-      "sha256": "764a0e92f26f6a6f32d00883c780965a852d335b951d9f27e2c1a316fae946e7",
-      "integration_changes": "Replace private source descriptions or internal review material with public technical notes. Raw CAD, artwork and geometry/rendering algorithms are preserved."
+      "sha256": "4c7099bbd8e6a43b3856faa63f62a29d2a3ef671a1ac7ed35223b0134880dd14",
+      "integration_changes": "Consume the published assembled mk2 model with fitted enclosure and PCB-driven optical transport."
     },
     "node_modules/@b1ug/blink1-models/models/mk2/model-assets/source.json": {
       "handoff_path": "source/model-assets/source.json",
       "original_sha256": "34d5d2f9e129cf482be12485b34073ffbb51b8882bc000e13694a9ca503f7761",
-      "sha256": "2ad70d26bed617c673da560aada880008d388b5ca9e5520824ab6984284b211d",
-      "integration_changes": "Replace private source descriptions or internal review material with public technical notes. Raw CAD, artwork and geometry/rendering algorithms are preserved."
+      "sha256": "f65fdbbdf81f03a79672ca978f05963989fe803706c39300e8141aa933b9894f",
+      "integration_changes": "Consume the published assembled mk2 model with fitted enclosure and PCB-driven optical transport."
     },
     "src/nightlab/compiler/nb1.wasm": {
       "sha256": "a96e9b898094ffca5ad6d1c8e388df8695b8d2087726aec6cbe00846e17c0790",
@@ -108,6 +100,18 @@
     "src/nightlab/compiler/COLORKIT-LICENSE.txt": {
       "sha256": "aeb30ebfe31f295341ba5a850da50416931ab242bc225ca363a16aa7f124b05a",
       "integration_changes": "Consume exact public nb1 b5 Go/WASM artifacts and original Go, nb1 and colorkit notices; compiler regeneration is separately verified."
+    },
+    "node_modules/@b1ug/blink1-models/models/mk2/enclosure-fit.js": {
+      "handoff_path": "source/enclosure-fit.js",
+      "sha256": "dd8c4100b1ff3d1029bc21c49cad1688ca2a529662bc80d7eac0a0f02885a6fa",
+      "original_sha256": "33a8c0fba98e078b9497da20289508ff5da08a4cfccc8abafbeec36a336ece99",
+      "integration_changes": "Consume the published assembled mk2 model with fitted enclosure and PCB-driven optical transport."
+    },
+    "node_modules/@b1ug/blink1-models/models/mk2/model-assets/seating-fit.json": {
+      "handoff_path": "source/model-assets/seating-fit.json",
+      "sha256": "764b507f5b94f71b2ccae88a98cbcede02e705b7b9deadddd077a6021a5aa89f",
+      "original_sha256": "04516bf501b32ff8667a1738a99fad4cfde10cb5bcfc30836841115111d0c3c5",
+      "integration_changes": "Consume the published assembled mk2 model with fitted enclosure and PCB-driven optical transport."
     }
   },
   "excluded_categories": [
@@ -116,5 +120,5 @@
     "Development screenshots and capture metadata",
     "Internal integration instructions"
   ],
-  "geometry_policy": "Raw ThingM STL and required LICENSE bytes are unchanged. The renderer changes only a source-description label, not geometry, material or light-field algorithms."
+  "geometry_policy": "The viewer uses the assembled mk2 geometry, optical transport and studio configuration from b1ug/blink1-models at 7be4133489b734314aba9f0fff944b57b7d21791. Original ThingM STL files and their attribution are preserved. PCB layout data and its geometry derivatives carry the accompanying CC BY-SA 3.0 notice."
 }

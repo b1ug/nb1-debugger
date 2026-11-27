@@ -12,7 +12,7 @@ Only explicit Play or Stop uses execution APIs. Play validates directly without 
 
 Screen animation, draft targets, cached readback and Job state remain distinguishable. Cached RGB and its ISO sample time are not optical measurements or per-command acknowledgments. LED 1 is the blink(1) wordmark face and LED 2 the ThingM face. Camera movement never swaps channels. `?view=faces`, loading, unavailable WebGL and context loss retain the two-face fallback.
 
-The displayed enclosure, connector and light field are illustrative. The original ThingM STL meshes remain unchanged; the derived display assembly is not manufacturing CAD or calibrated colorimetry. Public model metadata and license links explain the limitations.
+All three workbench pages show the assembled mk2. Each screen color drives the matching PCB emitter and its simulated light field through the diffuser. The camera and studio match the model catalog. The original ThingM STL meshes remain unchanged; the derived display assembly is not manufacturing CAD or calibrated colorimetry. Public model metadata and license links explain the limitations.
 
 ## Closed bundle
 
